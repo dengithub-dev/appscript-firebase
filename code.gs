@@ -43,3 +43,11 @@ function put_data(data){
   var base = FirebaseApp.getDatabaseByUrl(url_, secret_)
   base.setData("items", data); //you can change the "items" depending on your choice
 }
+
+//delete data in firebase using appscript
+function firebase_delete_data(){
+  var url_ = "your firebase url";
+  var secret_ = "your secret key";
+  var base = FirebaseApp.getDatabaseByUrl(url_, secret_);
+  base.removeData("your main-key/your sub-key");
+}
